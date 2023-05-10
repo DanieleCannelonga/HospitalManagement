@@ -36,6 +36,9 @@ public class Ambulanza {
 	@NotNull
 	private Boolean disponibile;
 
+	public Ambulanza(long l, String string) {
+	}
+
 	public Long getIdAmbulanza() {
 		return idAmbulanza;
 	}
@@ -68,6 +71,4 @@ public class Ambulanza {
 		this.disponibile = disponibile;
 	}
 	
-	
-
 }
