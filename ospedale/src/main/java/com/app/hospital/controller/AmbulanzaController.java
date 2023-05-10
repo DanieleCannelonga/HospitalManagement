@@ -49,7 +49,7 @@ public class AmbulanzaController {
 	}
 	
 	@PutMapping(value = "/editAmbulanza/{id}", consumes = "application/json", produces = "application/json")
-	public ResponseEntity<Ambulanza> editAmbulanza(@RequestBody Ambulanza Ambulanza) {
+	public ResponseEntity<Ambulanza> editAmbulanza(@PathVariable Long id, @RequestBody Ambulanza Ambulanza) {
 	    Ambulanza nuovoAmbulanza = ambulanzaService.saveOrUpdate(Ambulanza);
 	    return ResponseEntity.ok(nuovoAmbulanza);
 	}
