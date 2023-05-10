@@ -30,6 +30,7 @@ public class CartellaClinica {
 	
 	@Column(name="diagnosi")
 	@JsonProperty("diagnosi")
+	@NotNull
 	private String diagnosi;
 	
 	@Column(name="esamiEffettuati")
@@ -50,10 +51,12 @@ public class CartellaClinica {
 	
 	@Column(name="dataCreazione")
 	@JsonProperty("data_creazione")
+	@NotNull
 	private Date dataCreazione;
 	
 	@Column(name="dataAggiornamento")
 	@JsonProperty("data_aggiornamento")
+	@NotNull
 	private Date dataAggiornamento;
 	
 	@OneToOne

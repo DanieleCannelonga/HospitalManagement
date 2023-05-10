@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -23,6 +24,7 @@ public class Farmaco {
 	
 	@Column(name="nome")
 	@JsonProperty("nome")
+	@NotNull
 	private String nome;
 	
 	@Column(name="descrizione")
@@ -31,6 +33,7 @@ public class Farmaco {
 	
 	@Column(name="dosaggio")
 	@JsonProperty("dosaggio")
+	@NotNull
 	private String dosaggio;
 	
 	@Column(name="prezzo")

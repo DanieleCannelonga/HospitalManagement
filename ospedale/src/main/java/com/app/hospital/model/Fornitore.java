@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -21,13 +22,19 @@ public class Fornitore {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idFornitore;
 	
-	@Column(name="nome")
-	@JsonProperty("nome")
-	private String nome;
+	@Column(name="ragioneSociale")
+	@JsonProperty("ragione_sociale")
+	@NotNull
+	private String ragioneSociale;
 	
 	@Column(name="descrizione")
 	@JsonProperty("descrizione")
 	private String descrizione;
+	
+	@Column(name="partitaIva")
+	@JsonProperty("partita_iva")
+	@NotNull
+	private Integer partitaIva;
 	
 	@Column(name="indirizzo")
 	@JsonProperty("indirizzo")
@@ -35,6 +42,7 @@ public class Fornitore {
 	
 	@Column(name="numeroTelefono")
 	@JsonProperty("numero_telefono")
+	@NotNull
 	private Integer numeroTelefono;
 	
 	@Column(name="email")

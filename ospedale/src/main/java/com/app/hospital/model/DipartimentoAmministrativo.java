@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -27,6 +28,7 @@ public class DipartimentoAmministrativo {
 	
 	@Column(name="nome")
 	@JsonProperty("nome")
+	@NotNull
 	private String nome;
 	
 	@Column(name="descrizione")
@@ -35,10 +37,12 @@ public class DipartimentoAmministrativo {
 	
 	@Column(name="indirizzo")
 	@JsonProperty("indirizzo")
+	@NotNull
 	private String indirizzo;
 	
 	@Column(name="numeroTelefono")
 	@JsonProperty("numero_telefono")
+	@NotNull
 	private Integer numeroTelefono;
 	
 	@Column(name="email")
@@ -47,6 +51,7 @@ public class DipartimentoAmministrativo {
 	
 	@Column(name="pec")
 	@JsonProperty("pec")
+	@NotNull
 	private String pec;
 
 	@OneToMany

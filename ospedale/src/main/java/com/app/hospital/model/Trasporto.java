@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -31,20 +32,24 @@ public class Trasporto {
 	
 	@Column(name="oraInizio")
 	@JsonProperty("ora_inizio")
+	@NotNull
 	private LocalDateTime oraInizio;
 	
 	@Column(name="oraFine")
 	@JsonProperty("ora_fine")
+	@NotNull
 	private LocalDateTime oraFine;
 	
 	@OneToOne
 	@JoinColumn(name="idPaziente")
 	@JsonProperty("paziente")
+	@NotNull
 	private Paziente paziente;
 
 	@OneToOne
 	@JoinColumn(name="idAmbulanza")
 	@JsonProperty("ambulanza")
+	@NotNull
 	private Ambulanza Ambulanza;
 
 }

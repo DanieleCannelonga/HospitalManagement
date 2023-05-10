@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -25,10 +26,12 @@ public class EsameDiagnostico {
 	
 	@Column(name="tipoEsame")
 	@JsonProperty("tipo_esame")
+	@NotNull
 	private String tipoEsame;
 	
 	@Column(name="risultatiEsame")
 	@JsonProperty("risultati_esame")
+	@NotNull
 	private String risultatiEsame;
 	
 	@Column(name="note")
@@ -37,10 +40,12 @@ public class EsameDiagnostico {
 	
 	@Column(name="oraInizio")
 	@JsonProperty("ora_inizio")
+	@NotNull
 	private LocalDateTime oraInizio;
 	
 	@Column(name="oraFine")
 	@JsonProperty("ora_fine")
+	@NotNull
 	private LocalDateTime oraFine;
 
 }

@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -25,6 +26,7 @@ public class SalaOperatoria {
 	
 	@Column(name="nome")
 	@JsonProperty("nome")
+	@NotNull
 	private String nome;
 	
 	@Column(name="descrizione")
@@ -33,6 +35,7 @@ public class SalaOperatoria {
 	
 	@Column(name="oraPrenotazione")
 	@JsonProperty("ora_prenotazione")
+	@NotNull
 	private LocalDateTime oraPrenotazione;
 
 }

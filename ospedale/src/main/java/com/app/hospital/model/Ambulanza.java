@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -27,10 +28,12 @@ public class Ambulanza {
 	
 	@Column(name="targa")
 	@JsonProperty("targa")
+	@NotNull
 	private String targa;
 	
 	@Column(name="disponibile")
 	@JsonProperty("disponibile")
+	@NotNull
 	private Boolean disponibile;
 
 }

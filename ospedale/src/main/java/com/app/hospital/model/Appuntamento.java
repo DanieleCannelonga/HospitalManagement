@@ -31,10 +31,12 @@ public class Appuntamento {
 	
 	@Column(name="oraInizio")
 	@JsonProperty("ora_inizio")
+	@NotNull
 	private LocalDateTime oraInizio;
 	
 	@Column(name="oraFine")
 	@JsonProperty("ora_fine")
+	@NotNull
 	private LocalDateTime oraFine;
 
 }

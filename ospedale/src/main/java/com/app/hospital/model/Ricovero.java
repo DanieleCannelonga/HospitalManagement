@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -25,6 +26,7 @@ public class Ricovero {
 	
 	@Column(name="diagnosi")
 	@JsonProperty("diagnosi")
+	@NotNull
 	private String diagnosi;
 	
 	@Column(name="prescrizioni")
@@ -37,10 +39,12 @@ public class Ricovero {
 	
 	@Column(name="oraInizio")
 	@JsonProperty("ora_inizio")
+	@NotNull
 	private LocalDateTime oraInizio;
 	
 	@Column(name="oraFine")
 	@JsonProperty("ora_fine")
+	@NotNull
 	private LocalDateTime oraFine;
 
 }
