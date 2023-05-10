@@ -36,6 +36,10 @@ public class Ambulanza {
 	@NotNull
 	private Boolean disponibile;
 
+	public Ambulanza(long l, String string) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Long getIdAmbulanza() {
 		return idAmbulanza;
 	}
